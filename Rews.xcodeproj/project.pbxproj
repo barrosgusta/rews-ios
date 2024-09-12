@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5876B3D92C8D047E0077960A /* LakesDangerZoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5876B3D82C8D047E0077960A /* LakesDangerZoneApp.swift */; };
+		5838F1BF2C8E832500A43263 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5838F1BE2C8E832500A43263 /* MapView.swift */; };
+		5838F1C12C8E839F00A43263 /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5838F1C02C8E839F00A43263 /* ServicesView.swift */; };
+		5876B3D92C8D047E0077960A /* Rews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5876B3D82C8D047E0077960A /* Rews.swift */; };
 		5876B3DB2C8D047E0077960A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5876B3DA2C8D047E0077960A /* ContentView.swift */; };
 		5876B3DD2C8D04810077960A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5876B3DC2C8D04810077960A /* Assets.xcassets */; };
-		5876B3E02C8D04810077960A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5876B3DF2C8D04810077960A /* Preview Assets.xcassets */; };
+		58E2068B2C8E815A003CDE61 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E2068A2C8E815A003CDE61 /* NewsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5876B3D52C8D047E0077960A /* LakesDangerZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LakesDangerZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5876B3D82C8D047E0077960A /* LakesDangerZoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakesDangerZoneApp.swift; sourceTree = "<group>"; };
+		5838F1BE2C8E832500A43263 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5838F1C02C8E839F00A43263 /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
+		5876B3D52C8D047E0077960A /* Rews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5876B3D82C8D047E0077960A /* Rews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rews.swift; sourceTree = "<group>"; };
 		5876B3DA2C8D047E0077960A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5876B3DC2C8D04810077960A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5876B3DF2C8D04810077960A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58E2068A2C8E815A003CDE61 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +39,7 @@
 		5876B3CC2C8D047D0077960A = {
 			isa = PBXGroup;
 			children = (
-				5876B3D72C8D047E0077960A /* LakesDangerZone */,
+				5876B3D72C8D047E0077960A /* Rews */,
 				5876B3D62C8D047E0077960A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,36 +47,54 @@
 		5876B3D62C8D047E0077960A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5876B3D52C8D047E0077960A /* LakesDangerZone.app */,
+				5876B3D52C8D047E0077960A /* Rews.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5876B3D72C8D047E0077960A /* LakesDangerZone */ = {
+		5876B3D72C8D047E0077960A /* Rews */ = {
 			isa = PBXGroup;
 			children = (
-				5876B3D82C8D047E0077960A /* LakesDangerZoneApp.swift */,
-				5876B3DA2C8D047E0077960A /* ContentView.swift */,
+				58E206872C8E8100003CDE61 /* Networking */,
+				58E206862C8E80F7003CDE61 /* Models */,
+				58E206852C8E80ED003CDE61 /* Views */,
+				5876B3D82C8D047E0077960A /* Rews.swift */,
 				5876B3DC2C8D04810077960A /* Assets.xcassets */,
-				5876B3DE2C8D04810077960A /* Preview Content */,
 			);
-			path = LakesDangerZone;
+			path = Rews;
 			sourceTree = "<group>";
 		};
-		5876B3DE2C8D04810077960A /* Preview Content */ = {
+		58E206852C8E80ED003CDE61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5876B3DF2C8D04810077960A /* Preview Assets.xcassets */,
+				5876B3DA2C8D047E0077960A /* ContentView.swift */,
+				58E2068A2C8E815A003CDE61 /* NewsView.swift */,
+				5838F1BE2C8E832500A43263 /* MapView.swift */,
+				5838F1C02C8E839F00A43263 /* ServicesView.swift */,
 			);
-			path = "Preview Content";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58E206862C8E80F7003CDE61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58E206872C8E8100003CDE61 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5876B3D42C8D047E0077960A /* LakesDangerZone */ = {
+		5876B3D42C8D047E0077960A /* Rews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5876B3E32C8D04810077960A /* Build configuration list for PBXNativeTarget "LakesDangerZone" */;
+			buildConfigurationList = 5876B3E32C8D04810077960A /* Build configuration list for PBXNativeTarget "Rews" */;
 			buildPhases = (
 				5876B3D12C8D047E0077960A /* Sources */,
 				5876B3D22C8D047E0077960A /* Frameworks */,
@@ -82,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = LakesDangerZone;
+			name = Rews;
 			productName = LakesDangerZone;
-			productReference = 5876B3D52C8D047E0077960A /* LakesDangerZone.app */;
+			productReference = 5876B3D52C8D047E0077960A /* Rews.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5876B3D02C8D047D0077960A /* Build configuration list for PBXProject "LakesDangerZone" */;
+			buildConfigurationList = 5876B3D02C8D047D0077960A /* Build configuration list for PBXProject "Rews" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5876B3D42C8D047E0077960A /* LakesDangerZone */,
+				5876B3D42C8D047E0077960A /* Rews */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +147,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5876B3E02C8D04810077960A /* Preview Assets.xcassets in Resources */,
 				5876B3DD2C8D04810077960A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5838F1C12C8E839F00A43263 /* ServicesView.swift in Sources */,
 				5876B3DB2C8D047E0077960A /* ContentView.swift in Sources */,
-				5876B3D92C8D047E0077960A /* LakesDangerZoneApp.swift in Sources */,
+				5838F1BF2C8E832500A43263 /* MapView.swift in Sources */,
+				5876B3D92C8D047E0077960A /* Rews.swift in Sources */,
+				58E2068B2C8E815A003CDE61 /* NewsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +295,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LakesDangerZone/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = BYQ53RS6D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = REWS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to track your activity in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide personalized services.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BarrosGusta.LakesDangerZone;
+				PRODUCT_BUNDLE_IDENTIFIER = BarrosGusta.Rews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -299,9 +328,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LakesDangerZone/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = BYQ53RS6D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = REWS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to track your activity in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide personalized services.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,7 +346,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BarrosGusta.LakesDangerZone;
+				PRODUCT_BUNDLE_IDENTIFIER = BarrosGusta.Rews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5876B3D02C8D047D0077960A /* Build configuration list for PBXProject "LakesDangerZone" */ = {
+		5876B3D02C8D047D0077960A /* Build configuration list for PBXProject "Rews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5876B3E12C8D04810077960A /* Debug */,
@@ -332,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5876B3E32C8D04810077960A /* Build configuration list for PBXNativeTarget "LakesDangerZone" */ = {
+		5876B3E32C8D04810077960A /* Build configuration list for PBXNativeTarget "Rews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5876B3E42C8D04810077960A /* Debug */,
