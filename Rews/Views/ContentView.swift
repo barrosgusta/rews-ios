@@ -16,6 +16,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Serviços", systemImage: "phone")
                 }
+            YouTubeView()
+                .tabItem {
+                    Label("Vídeos", systemImage: "play.circle")
+                }
         }
     }
 }
