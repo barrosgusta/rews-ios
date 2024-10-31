@@ -7,7 +7,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Notícias", systemImage: "newspaper")
                 }
-            
             MapView()
                 .tabItem {
                     Label("Mapa", systemImage: "map")

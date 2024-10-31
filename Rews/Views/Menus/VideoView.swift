@@ -33,14 +33,12 @@ struct YouTubeView: View {
                             .frame(height: 200)
                             .cornerRadius(10)
                             .shadow(radius: 10)
-                        Spacer()
-                    }
+                    }.navigationTitle("Vídeos")
                 }
             }
             
         }
         .animation(.default, value: videoViewModel.isLoading)
-        .navigationTitle("Vídeos")
         .onAppear {
             if videoViewModel.videos.isEmpty {
                 try! videoViewModel.fetchData()

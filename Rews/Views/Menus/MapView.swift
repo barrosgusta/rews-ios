@@ -11,7 +11,7 @@ import MapKit
 struct MapView: View {
     let locationManager = CLLocationManager()
     
-    @State private var shelterViewModel = ShelterViewModel()
+    @StateObject private var shelterViewModel = ShelterViewModel()
     @State private var mainTownRegion: MapCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
         center: CLLocationCoordinate2D(
             latitude: 0,
@@ -20,7 +20,6 @@ struct MapView: View {
         span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
     ))
     @State private var selection: Int?
-    
     
     var body: some View {
         ZStack {
@@ -67,36 +66,37 @@ struct MapView: View {
                             where: { $0.id == selection }
                         ) else { return }
                 }
-                .onAppear {
-                    locationManager.requestWhenInUseAuthorization()
-                    if shelterViewModel.shelters.isEmpty {
-                        try! shelterViewModel.fetchShelters()
-                    }
-                    if shelterViewModel.mainTown == nil {
-                        try! shelterViewModel.fetchSheltersMainTown { result in
-                            switch result {
-                            case .success(let shelterMainTown):
-                                DispatchQueue.main.async {
-                                    let latitude = Double(shelterMainTown.latitude) ?? 0
-                                    let longitude = Double(shelterMainTown.longitude) ?? 0
-                                    
-                                    self.mainTownRegion = MapCameraPosition.region(MKCoordinateRegion(
-                                        center: CLLocationCoordinate2D(
-                                            latitude: latitude,
-                                            longitude: longitude
-                                        ),
-                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-                                    ))
-                                }
-                            case .failure(let error):
-                                print("Failed to fetch articles:", error)
-                            }
+            }
+        }
+        .animation(.interactiveSpring, value: shelterViewModel.isLoading)
+        .task {
+            locationManager.requestWhenInUseAuthorization()
+            if shelterViewModel.shelters.isEmpty {
+                try! shelterViewModel.fetchShelters()
+                
+            }
+            if shelterViewModel.mainTown == nil {
+                try! shelterViewModel.fetchSheltersMainTown { result in
+                    switch result {
+                    case .success(let shelterMainTown):
+                        DispatchQueue.main.async {
+                            let latitude = Double(shelterMainTown.latitude) ?? 0
+                            let longitude = Double(shelterMainTown.longitude) ?? 0
+                            
+                            self.mainTownRegion = MapCameraPosition.region(MKCoordinateRegion(
+                                center: CLLocationCoordinate2D(
+                                    latitude: latitude,
+                                    longitude: longitude
+                                ),
+                                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+                            ))
                         }
+                    case .failure(let error):
+                        print("Failed to fetch Main Town:", error)
                     }
                 }
             }
         }
-        .animation(.interactiveSpring, value: shelterViewModel.isLoading)
     }
 }
 

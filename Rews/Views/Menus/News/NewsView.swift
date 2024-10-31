@@ -37,7 +37,7 @@ struct NewsView: View {
                     ArticleView(
                         title: article.title,
                         content: article.content,
-                        author: article.author.name,
+                        author: article.User.name,
                         publishDate: formatDate(from: article.publishedAt)
                     )
                 }
@@ -55,7 +55,7 @@ struct NewsView: View {
         return formatter.date(from: dateString) ?? Date()
     }
 }
-
-#Preview {
-    NewsView()
-}
+//
+//#Preview {
+//    NewsView()
+//}
