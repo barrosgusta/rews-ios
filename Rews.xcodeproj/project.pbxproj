@@ -22,14 +22,13 @@
 		58EDD41C2C93AB49004C2AF2 /* ServicePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDD41B2C93AB49004C2AF2 /* ServicePhone.swift */; };
 		58EDD41E2C93ABEA004C2AF2 /* ServicePhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDD41D2C93ABEA004C2AF2 /* ServicePhoneViewModel.swift */; };
 		58EDD4212C93B6F5004C2AF2 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDD4202C93B6F5004C2AF2 /* Article.swift */; };
-		58EDD4232C93BB6D004C2AF2 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDD4222C93BB6D004C2AF2 /* Author.swift */; };
+		58EDD4232C93BB6D004C2AF2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDD4222C93BB6D004C2AF2 /* User.swift */; };
 		58EDD4252C93BB93004C2AF2 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDD4242C93BB93004C2AF2 /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5838F1BE2C8E832500A43263 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5838F1C02C8E839F00A43263 /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
-		583D0CBA2C9CFF1F0095E535 /* env.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = env.xcconfig; sourceTree = "<group>"; };
 		583D0CBB2C9D00A40095E535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5876B3D52C8D047E0077960A /* Rews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5876B3D82C8D047E0077960A /* Rews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rews.swift; sourceTree = "<group>"; };
@@ -45,7 +44,7 @@
 		58EDD41B2C93AB49004C2AF2 /* ServicePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePhone.swift; sourceTree = "<group>"; };
 		58EDD41D2C93ABEA004C2AF2 /* ServicePhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePhoneViewModel.swift; sourceTree = "<group>"; };
 		58EDD4202C93B6F5004C2AF2 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		58EDD4222C93BB6D004C2AF2 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		58EDD4222C93BB6D004C2AF2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		58EDD4242C93BB93004C2AF2 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +66,6 @@
 		5876B3CC2C8D047D0077960A = {
 			isa = PBXGroup;
 			children = (
-				583D0CBA2C9CFF1F0095E535 /* env.xcconfig */,
 				5876B3D72C8D047E0077960A /* Rews */,
 				5876B3D62C8D047E0077960A /* Products */,
 			);
@@ -86,7 +84,6 @@
 			children = (
 				583D0CBB2C9D00A40095E535 /* Info.plist */,
 				58EDD41F2C93AC26004C2AF2 /* ViewModel */,
-				58E206872C8E8100003CDE61 /* Networking */,
 				58E206862C8E80F7003CDE61 /* Models */,
 				58E206852C8E80ED003CDE61 /* Views */,
 				5876B3D82C8D047E0077960A /* Rews.swift */,
@@ -132,16 +129,9 @@
 				583D0CBC2C9D033B0095E535 /* Errors */,
 				58EDD41B2C93AB49004C2AF2 /* ServicePhone.swift */,
 				58EDD4202C93B6F5004C2AF2 /* Article.swift */,
-				58EDD4222C93BB6D004C2AF2 /* Author.swift */,
+				58EDD4222C93BB6D004C2AF2 /* User.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		58E206872C8E8100003CDE61 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		58EDD41F2C93AC26004C2AF2 /* ViewModel */ = {
@@ -236,7 +226,7 @@
 				58EDD4212C93B6F5004C2AF2 /* Article.swift in Sources */,
 				5876B3DB2C8D047E0077960A /* ContentView.swift in Sources */,
 				58CA69362C9FA47600099335 /* Video.swift in Sources */,
-				58EDD4232C93BB6D004C2AF2 /* Author.swift in Sources */,
+				58EDD4232C93BB6D004C2AF2 /* User.swift in Sources */,
 				58EDD41C2C93AB49004C2AF2 /* ServicePhone.swift in Sources */,
 				5838F1BF2C8E832500A43263 /* MapView.swift in Sources */,
 				58EDD4252C93BB93004C2AF2 /* ArticleViewModel.swift in Sources */,
@@ -251,7 +241,6 @@
 /* Begin XCBuildConfiguration section */
 		5876B3E12C8D04810077960A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 583D0CBA2C9CFF1F0095E535 /* env.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
