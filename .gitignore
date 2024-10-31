@@ -1,2 +1,3 @@
 
 env.xcconfig
+*.DS_Store
