@@ -12,11 +12,10 @@ class ArticleViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     func fetchData() {
-        guard let url = URL(string: "http://192.168.2.11:3000/article") else {
+        guard let url = URL(string: "http://10.7.5.63:3000/articles") else {
             print("Invalid URL")
             return
         }
-        
         
         self.isLoading = true
         

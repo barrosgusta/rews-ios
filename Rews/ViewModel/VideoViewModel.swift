@@ -12,7 +12,7 @@ class VideoViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     func fetchData() throws {
-        guard let url = URL(string: "http://192.168.2.11:3000/video") else {
+        guard let url = URL(string: "http://10.7.5.63:3000/videos") else {
             print("Invalid URL")
             return
         }

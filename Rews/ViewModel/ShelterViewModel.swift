@@ -10,10 +10,10 @@ import Foundation
 class ShelterViewModel: ObservableObject {
     @Published var shelters: [Shelter] = []
     @Published var mainTown: SheltersMainTown? = nil
-    @Published var isLoading: Bool = false
+    @Published var isLoading: Bool = true
     
     func fetchShelters() throws {
-        guard let url = URL(string: "http://192.168.5.17:3000/shelter") else {
+        guard let url = URL(string: "http://10.7.5.63:3000/shelters") else {
             print("Invalid URL")
             return
         }
@@ -31,7 +31,7 @@ class ShelterViewModel: ObservableObject {
                     print("Failed to decode JSON: \(error)")
                 }
             } else if let error = error {
-                print("HTTP Request Failed \(error)")
+                print("Failed to fetch JSON: \(error)")
             }
             DispatchQueue.main.async {
                 self.isLoading = false
@@ -40,7 +40,7 @@ class ShelterViewModel: ObservableObject {
     }
     
     func fetchSheltersMainTown(completion: @escaping (Result<SheltersMainTown, Error>) -> Void) throws {
-        guard let url = URL(string: "http://192.168.2.11:3000/shelter/maintown") else {
+        guard let url = URL(string: "http://10.7.5.63:3000/shelters/maintown") else {
             print("Invalid URL")
             return
         }

@@ -11,11 +11,11 @@ struct Article: Codable, Identifiable {
     let id: Int
     let title, content, publishedAt: String
     let authorID: Int
-    let author: User
+    let User: User
 
     enum CodingKeys: String, CodingKey {
         case id, title, content, publishedAt
         case authorID = "authorId"
-        case author
+        case User
     }
 }

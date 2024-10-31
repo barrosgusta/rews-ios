@@ -12,7 +12,7 @@ class ServicePhoneViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     func fetchData() throws {
-        guard let url = URL(string: "http://192.168.2.11:3000/service-phone") else {
+        guard let url = URL(string: "http://10.7.5.63:3000/service-phones") else {
             print("Invalid URL")
             return
         }
